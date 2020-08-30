@@ -174,7 +174,7 @@ public class RESTStepCalls {
 
         //go through all the drawn cards
         for (cardsDrawn = 0; cardsDrawn < cardsArray.length(); cardsDrawn++) {
-            JSONObject drawnCard = cardsArray.getJSONObject(cardsDrawn);
+            JSONObject drawnCard = cardsArray.getJSONObject(cardsDrawn); //get individual card object
             Assert.assertTrue("One of card parameters is null!", drawnCard.getString("code") != null && drawnCard.getString("suit") != null && drawnCard.getString("value") != null);
             //check if drawn card is present inside any of the expected cards
             for (cardsObject card : expectedCards.asList(cardsObject.class)) {
@@ -185,14 +185,13 @@ public class RESTStepCalls {
             }
         }
         Assert.assertTrue("All drawn cards were not present in expected", cardsArray.length() == cardsCounted);
-        //assert that deck used is correct
     }
 
     @Then("^Only \"([^\"]*)\" cards are in deck$")
     public void only_cards_are_in_deck(int expectedCardCount) {
+        //check that in latest response there are just as many cards as expected
         int actualCardCount = responseBody.getInt("remaining"); //create array for the drawn cards from response
         Assert.assertTrue("Card count in response is not equal to expected", actualCardCount == expectedCardCount);
-        // Write code here that turns the phrase above into concrete actions
     }
 
     @When("^Add drawn cards to \"([^\"]*)\" pile$")
@@ -214,7 +213,7 @@ public class RESTStepCalls {
         //add extracted card codes to pile
         HttpGet httpGet = new HttpGet(deckManipulation + prevDeckID + "/pile/" + pileName + "/add/?cards=" + drawnCards);
 
-        //send request
+        //send request adding the respective cards to pile
         try {
             httpGet.getRequestLine();
             responseBody = httpClient.execute(httpGet, SuccessAsJSONObject.responseHandler);
@@ -250,15 +249,18 @@ public class RESTStepCalls {
             responseBody = httpClient.execute(httpGet, SuccessAsJSONObject.responseHandler);
             JSONObject piles = responseBody.getJSONObject("piles");
             JSONObject pile = piles.getJSONObject(pileName); //get pile
-            JSONArray pileCardsArr = pile.getJSONArray("cards");
+            JSONArray pileCardsArr = pile.getJSONArray("cards"); //get cards from requested pile
             int cardsCounted = 0;
 
-            //go through all the drawn cards
+            //go through all the cards in pile
             for (cardsDrawn = 0; cardsDrawn < pileCardsArr.length(); cardsDrawn++) {
-                JSONObject pileCard = pileCardsArr.getJSONObject(cardsDrawn);
+                JSONObject pileCard = pileCardsArr.getJSONObject(cardsDrawn); //get pile card object
                 Assert.assertTrue("One of card parameters is null!", pileCard.getString("code") != null && pileCard.getString("suit") != null && pileCard.getString("value") != null);
+                //go through all the cards in previous draw
                 for (int i = 0; i < drawnCardsArray.length(); i++) {
-                    JSONObject drawnCard = drawnCardsArray.getJSONObject(i);
+                    JSONObject drawnCard = drawnCardsArray.getJSONObject(i); //get drawn card object
+                    //if any card codes are equal compare the rest of the details and count how many cards were evaluated
+                    //evaluated cards should be equal to drawn cards and all details must match
                     if (pileCard.getString("code").equals(drawnCard.getString("code"))) {
                         Assert.assertTrue("Card value or suit don't match", pileCard.getString("value").equals(drawnCard.getString("value"))
                                 && pileCard.getString("suit").equals(drawnCard.getString("suit")));
@@ -266,7 +268,7 @@ public class RESTStepCalls {
                     }
                 }
             }
-            System.out.println(pileCardsArr.length() + " " + cardsCounted);
+            //assert that all cards that were drawn were found in the specified pile
             Assert.assertTrue("All drawn cards were not present in the pile!", pileCardsArr.length() == cardsCounted);
         } catch (IOException e) {
             e.printStackTrace();
