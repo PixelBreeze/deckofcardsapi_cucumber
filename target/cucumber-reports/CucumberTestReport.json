@@ -1,0 +1,900 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Adding piles and list them",
+        "description": "",
+        "id": "test-6;adding-piles-and-list-them",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 909079000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Retrieve a partial deck of cards containing \"AS,AC,AD,AH,KS,KC,KD,KH,QS,QC,QD,QH,JS,JC,JD,JH\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AS,AC,AD,AH,KS,KC,KD,KH,QS,QC,QD,QH,JS,JC,JD,JH",
+                  "offset": 45
+                }
+              ],
+              "location": "RESTStepCalls.retrieve_a_partial_deck_of_cards_containing(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1512400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 411700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Only \"16\" cards are in deck",
+            "match": {
+              "arguments": [
+                {
+                  "val": "16",
+                  "offset": 6
+                }
+              ],
+              "location": "RESTStepCalls.only_cards_are_in_deck(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 299152500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Draw \"3\" cards from the deck",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 6
+                }
+              ],
+              "location": "RESTStepCalls.draw_cards_from_the_deck(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 125600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 119100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The deck has correct amount of cards remaining",
+            "match": {
+              "location": "RESTStepCalls.the_deck_has_correct_amount_of_cards_remaining()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 275816400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Add drawn cards to \"pile1\" pile",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pile1",
+                  "offset": 20
+                }
+              ],
+              "location": "RESTStepCalls.add_drawn_cards_to_pile(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 116600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 379734900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Pile \"pile1\" contains \"3\" cards",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pile1",
+                  "offset": 6
+                },
+                {
+                  "val": "3",
+                  "offset": 23
+                }
+              ],
+              "location": "RESTStepCalls.pile_contains_cards(String,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 282818200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "In pile \"pile1\" all drawn cards are present",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pile1",
+                  "offset": 9
+                }
+              ],
+              "location": "RESTStepCalls.in_pile_cards_are_present(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 178074900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Draw \"3\" cards from the deck",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 6
+                }
+              ],
+              "location": "RESTStepCalls.draw_cards_from_the_deck(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 115200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 94900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The deck has correct amount of cards remaining",
+            "match": {
+              "location": "RESTStepCalls.the_deck_has_correct_amount_of_cards_remaining()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 161111200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Add drawn cards to \"pile2\" pile",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pile2",
+                  "offset": 20
+                }
+              ],
+              "location": "RESTStepCalls.add_drawn_cards_to_pile(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 95100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 396822900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Pile \"pile2\" contains \"3\" cards",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pile2",
+                  "offset": 6
+                },
+                {
+                  "val": "3",
+                  "offset": 23
+                }
+              ],
+              "location": "RESTStepCalls.pile_contains_cards(String,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 281979300,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "In pile \"pile2\" all drawn cards are present",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pile2",
+                  "offset": 9
+                }
+              ],
+              "location": "RESTStepCalls.in_pile_cards_are_present(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RestsTests"
+          }
+        ]
+      }
+    ],
+    "name": "Test 6",
+    "description": "",
+    "id": "test-6",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/createCardPiles.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Retrieve a partial deck and draw all cards from it",
+        "description": "",
+        "id": "test-5;retrieve-a-partial-deck-and-draw-all-cards-from-it",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 153336400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Retrieve a partial deck of cards containing \"AS,AC,AD,AH,AS\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AS,AC,AD,AH,AS",
+                  "offset": 45
+                }
+              ],
+              "location": "RESTStepCalls.retrieve_a_partial_deck_of_cards_containing(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 127500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 178000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Only \"4\" cards are in deck",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 6
+                }
+              ],
+              "location": "RESTStepCalls.only_cards_are_in_deck(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 167123200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Draw \"4\" cards from the deck",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 6
+                }
+              ],
+              "location": "RESTStepCalls.draw_cards_from_the_deck(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 93300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 109400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The deck has correct amount of cards remaining",
+            "match": {
+              "location": "RESTStepCalls.the_deck_has_correct_amount_of_cards_remaining()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10029500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "All partial deck cards are present",
+            "match": {
+              "location": "RESTStepCalls.all_partial_deck_cards_are_present(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "code",
+                  "value",
+                  "suit"
+                ]
+              },
+              {
+                "cells": [
+                  "AS",
+                  "ACE",
+                  "SPADES"
+                ]
+              },
+              {
+                "cells": [
+                  "AC",
+                  "ACE",
+                  "CLUBS"
+                ]
+              },
+              {
+                "cells": [
+                  "AD",
+                  "ACE",
+                  "DIAMONDS"
+                ]
+              },
+              {
+                "cells": [
+                  "AH",
+                  "ACE",
+                  "HEARTS"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RestsTests"
+          }
+        ]
+      }
+    ],
+    "name": "Test 5",
+    "description": "",
+    "id": "test-5",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/drawCardDuplicates.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Draw a card from the deck",
+        "description": "",
+        "id": "test-3;draw-a-card-from-the-deck",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 172934500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Get \"1\" new shuffled deck of cards",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 5
+                }
+              ],
+              "location": "RESTStepCalls.deckRequestIsCalled(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 143127200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Draw \"5\" cards from the deck",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 6
+                }
+              ],
+              "location": "RESTStepCalls.draw_cards_from_the_deck(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 83200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 66700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The deck has correct amount of cards remaining",
+            "match": {
+              "location": "RESTStepCalls.the_deck_has_correct_amount_of_cards_remaining()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 152085000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Draw \"1\" cards from the deck",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 6
+                }
+              ],
+              "location": "RESTStepCalls.draw_cards_from_the_deck(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 80700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 60900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The deck has correct amount of cards remaining",
+            "match": {
+              "location": "RESTStepCalls.the_deck_has_correct_amount_of_cards_remaining()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RestsTests"
+          }
+        ]
+      }
+    ],
+    "name": "Test 3",
+    "description": "",
+    "id": "test-3",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/drawCardsFromDeck.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Attempt to draw more cards than deck contains",
+        "description": "",
+        "id": "test-3;attempt-to-draw-more-cards-than-deck-contains",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 149191200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Get \"1\" new shuffled deck of cards",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 5
+                }
+              ],
+              "location": "RESTStepCalls.deckRequestIsCalled(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 154808600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Draw \"53\" cards from the deck",
+            "match": {
+              "arguments": [
+                {
+                  "val": "53",
+                  "offset": 6
+                }
+              ],
+              "location": "RESTStepCalls.draw_cards_from_the_deck(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 175300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Error message \"Not enough cards remaining to draw 53 additional\" is encountered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Not enough cards remaining to draw 53 additional",
+                  "offset": 15
+                }
+              ],
+              "location": "RESTStepCalls.error_message_is_encountered(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RestsTests"
+          }
+        ]
+      }
+    ],
+    "name": "Test 3",
+    "description": "",
+    "id": "test-3",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/drawMoreThanInDeck.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Shuffle of the cards return unique deck every time",
+        "description": "",
+        "id": "test-1;shuffle-of-the-cards-return-unique-deck-every-time",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 153906400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Get \"2\" new shuffled deck of cards",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 5
+                }
+              ],
+              "location": "RESTStepCalls.deckRequestIsCalled(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 263804500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "A new shuffled deck is requested",
+            "match": {
+              "location": "RESTStepCalls.a_new_shuffled_deck_is_requested()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 108200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "New deck is unique",
+            "match": {
+              "location": "RESTStepCalls.new_deck_is_unique()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 100600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RestsTests"
+          }
+        ]
+      }
+    ],
+    "name": "Test 1",
+    "description": "",
+    "id": "test-1",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/getUniqueDeck.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Retrieve a partial deck and draw all cards from it",
+        "description": "",
+        "id": "test-4;retrieve-a-partial-deck-and-draw-all-cards-from-it",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 160142400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Retrieve a partial deck of cards containing \"AS,AC,AD,AH\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "AS,AC,AD,AH",
+                  "offset": 45
+                }
+              ],
+              "location": "RESTStepCalls.retrieve_a_partial_deck_of_cards_containing(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 78300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 147913800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Draw \"4\" cards from the deck",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 6
+                }
+              ],
+              "location": "RESTStepCalls.draw_cards_from_the_deck(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 93600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Status of request is success",
+            "match": {
+              "location": "RESTStepCalls.status_of_request_is_success()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 70700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The deck has correct amount of cards remaining",
+            "match": {
+              "location": "RESTStepCalls.the_deck_has_correct_amount_of_cards_remaining()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1810200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "All partial deck cards are present",
+            "match": {
+              "location": "RESTStepCalls.all_partial_deck_cards_are_present(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "code",
+                  "value",
+                  "suit"
+                ]
+              },
+              {
+                "cells": [
+                  "AS",
+                  "ACE",
+                  "SPADES"
+                ]
+              },
+              {
+                "cells": [
+                  "AC",
+                  "ACE",
+                  "CLUBS"
+                ]
+              },
+              {
+                "cells": [
+                  "AD",
+                  "ACE",
+                  "DIAMONDS"
+                ]
+              },
+              {
+                "cells": [
+                  "AH",
+                  "ACE",
+                  "HEARTS"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@RestsTests"
+          }
+        ]
+      }
+    ],
+    "name": "Test 4",
+    "description": "",
+    "id": "test-4",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/partialDeckAndRetrieve.feature",
+    "tags": []
+  }
+]
