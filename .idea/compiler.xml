@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cucumber_rest_api_automation" />
+        <module name="deckofcards_rest_automation" />
       </profile>
     </annotationProcessing>
   </component>

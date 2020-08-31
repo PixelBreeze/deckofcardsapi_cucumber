@@ -18,5 +18,5 @@ import org.junit.runner.RunWith;
         monochrome = true
 )
 
-public class RunAllFeatures {
+public class TestRunAllFeatures {
 }
